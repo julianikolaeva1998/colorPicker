@@ -1,0 +1,28 @@
+@import "../../../styles/mixins"
+.color-menu
+  border: 1px solid #b3b3b3
+  display: flex
+  &__output
+    flex-grow: 1
+    padding: 10px
+    @include text
+
+.color-menu__color-btn
+  padding: 10px
+  border-left: 1px solid #b3b3b3
+  border-right: 1px solid #b3b3b3
+  div
+    width: 20px
+    height: 20px
+
+.color-menu__rgb-btn
+  padding: 0px 10px
+  transition: background-color .2s ease-in-out
+  &:hover
+    background-color: #cdf0ff
+  div
+    width: 0
+    height: 0
+    border-left: 10px solid transparent
+    border-right: 10px solid transparent
+    border-top: 10px solid gray

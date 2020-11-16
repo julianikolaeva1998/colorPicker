@@ -1,0 +1,25 @@
+@import "../../../../styles/mixins"
+
+.color-list__item
+  @include text
+  display: flex
+  justify-content: space-between
+  padding: 10px
+  background-color: white
+  &:first-child
+    border-radius: 4px 4px 0 0
+  &:last-child
+    border-radius:  0 0 4px 4px
+  &:not(:last-child)
+    border-bottom: 1px solid gray
+  &:hover
+    background-color: rgb(239, 250, 255)
+  &--active
+    background-color: #6cd4fd
+    &:hover
+      background-color: #6cd4fd
+
+.color-list__color
+  width: 20px
+  height: 20px
+

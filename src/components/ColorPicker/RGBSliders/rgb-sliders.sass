@@ -1,0 +1,34 @@
+@import "../../../styles/mixins"
+
+.range-sliders
+  max-width: 200px
+  padding: 10px
+  position: absolute
+  right: 0
+  top: calc(100% + 20px)
+  background-color: white
+  z-index: 2
+  @include pop-up
+  &:before
+    content: ''
+    top: -8px
+    right: 52px
+    @include square
+  &:after
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    content: ''
+    background: inherit
+    border-radius: inherit
+    z-index: -1
+
+
+.control-buttons
+  display: flex
+  justify-content: flex-end
+  padding: 10px
+
+  

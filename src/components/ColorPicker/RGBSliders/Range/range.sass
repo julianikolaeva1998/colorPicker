@@ -1,0 +1,27 @@
+@import "../../../../styles/mixins"
+.range
+  display: flex
+  align-items: center
+  &__title
+    @include text
+    margin-right: 10px
+
+input[type="range"]
+  -webkit-appearance: none
+  border-radius: 2px
+  width: 200px
+  height: 2px
+  outline: none
+  transition: .1s
+
+  &::-webkit-slider-thumb
+    -webkit-appearance: none
+    width: 10px
+    height: 10px
+    border-radius: 50%
+    transition: .1s
+    background: #b3b3b3
+    cursor: pointer
+    &:hover, &:active
+      width: 14px
+      height: 14px
