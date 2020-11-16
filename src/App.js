@@ -11,7 +11,7 @@ const presetMenu = [
 
 function App() {
   return (
-      <ColorPicker colors={presetMenu} value='#FFCC33' />
+      <ColorPicker colors={presetMenu} value='#FFCC33' onChange={(color) => console.log(color)}/>
   );
 }
 

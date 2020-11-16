@@ -8,12 +8,16 @@ function ColorPicker(props) {
 	const presetRef = useRef();
 	const sliderRef = useRef();
 
-	const [color, setColor] = useState(props.value);
+	const [color, setColorValue] = useState(props.value);
 	const [rangeColor, setRangeColor] = useState(props.value);
+	const setColor = (color) => {
+		setColorValue(color);
+		props.onChange(color);
+	};
 	const setColors = (newColor) => {
 		setColor(newColor);
 		setRangeColor(newColor);
-	}
+	};
 	
 	const [isMenuShown, setSliderShown] = useState(false);
 	const [isPresetShown, setPresetShown] = useState(false);
